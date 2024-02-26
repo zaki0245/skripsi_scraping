@@ -173,4 +173,4 @@ schedule.every(3).minutes.do(scrape)
 
 while True:
     schedule.run_pending()
-    time.sleep(10)
+    time.sleep(3)
