@@ -4,7 +4,7 @@ db = mysql.connector.connect(host = 'localhost', user = 'root', password = '', p
 
 mycursor = db.cursor()
 
-sql = "UPDATE evaluasi SET nilai = 99"
+sql = "UPDATE evaluasi SET nilai = 98 WHERE created_at IS NULL"
 
 mycursor.execute(sql)
 
