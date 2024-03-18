@@ -109,7 +109,7 @@ def scrape():
 
             mycursor = db.cursor()
 
-            sql = "UPDATE evaluasi SET nilai = %s WHERE id_alternatif = %s AND id_kriteria = %s"
+            sql = "UPDATE evaluasi SET nilai = %s WHERE id_alternatif = %s AND id_kriteria = %s AND created_at IS NULL"
             updateData = (nil, alt, kri)
 
             mycursor.execute(sql, updateData)
@@ -169,8 +169,8 @@ def scrape():
 
 scrape()
 
-schedule.every(10).minutes.do(scrape)
+# schedule.every(10).minutes.do(scrape)
 
-while True:
-    schedule.run_pending()
-    time.sleep(3)
+# while True:
+#     schedule.run_pending()
+#     time.sleep(3)
