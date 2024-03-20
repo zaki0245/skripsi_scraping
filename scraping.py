@@ -173,4 +173,4 @@ scrape()
 
 # while True:
 #     schedule.run_pending()
-#     time.sleep(3)
+#     time.sleep(1)
