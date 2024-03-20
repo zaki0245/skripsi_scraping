@@ -169,8 +169,8 @@ def scrape():
 
 scrape()
 
-# schedule.every(10).minutes.do(scrape)
+schedule.every().hour.at(':05').do(scrape)
 
-# while True:
-#     schedule.run_pending()
-#     time.sleep(1)
+while True:
+    schedule.run_pending()
+    time.sleep(1)
